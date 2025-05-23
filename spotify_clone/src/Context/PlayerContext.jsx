@@ -96,7 +96,8 @@ const PlayerContextProvider=(props)=>{
         handleSeek,
         playWithId,
         next,
-        previous,seekSong
+        previous,seekSong,
+        songsData
 
     }
     return(

@@ -2,12 +2,13 @@ import React, { useContext } from 'react'
 import { assets,} from '../assets/assets'
 import { PlayerContext } from '../Context/PlayerContext'
 
+
 const Player = () => {
-  const{track,seekBar,seekBg,playStatus ,play,pause,time,previous,next,seekSong}=useContext(PlayerContext)
+  const{track,seekBar,seekBg,playStatus ,play,pause,time,previous,next,seekSong,  songsData}=useContext(PlayerContext)
   return (
     <div className='h-[10%] bg-black flex justify-between items-center text-white px-4'>
        <div className='hidden lg:flex items-center gap-4'>
-         <img  className='w-12' src={track.image} alt="" />  
+         <img  className='w-12' src={songsData[0].image} alt="" />  
          <div>
              <p>{track.name}</p>
              <p>{track.desc.slice(0,12)}</p>
